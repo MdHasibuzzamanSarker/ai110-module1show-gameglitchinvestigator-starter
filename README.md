@@ -25,30 +25,27 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [x] Describe the game's purpose: The game lets the player guess a secret number inside a chosen difficulty range. The goal is to guess correctly before running out of attempts.
+- [x] Detail which bugs you found: The secret number changed each time because the app was not saving game state between button clicks. The hint messages were also giving the wrong direction for some guesses.
+- [x] Explain what fixes you applied: I stored the game state in Streamlit session state, fixed the hint logic, and moved the game rules into logic_utils.py.
 
 ## 📸 Demo Walkthrough
 
-Describe your fixed game in numbered steps so a reader can follow along without watching a video:
-
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. The player opens the app and chooses a difficulty level.
+2. The game shows the guess range and the number of attempts left.
+3. The player enters a guess and clicks Submit.
+4. The app gives a hint and updates the score based on the result.
+5. The player keeps guessing until they win or run out of attempts.
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
 ## 🧪 Test Results
 
 ```
-# Paste your pytest output here, e.g.:
-# pytest tests/
-# ========================= X passed in 0.XXs =========================
+pytest tests/
+# Run this command to verify the game logic tests.
 ```
 
 ## 🚀 Stretch Features
 
-- [ ] [If you choose to complete Challenge 4, describe the Enhanced UI changes here — a screenshot is optional]
+- [x] The app now has clearer hints, score updates, and a simple new-game flow.
